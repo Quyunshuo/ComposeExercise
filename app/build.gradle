@@ -1,0 +1,78 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.kotlinAndroid)
+}
+
+android {
+    namespace 'com.quyunshuo.compose.exercise'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.quyunshuo.compose.exercise"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    signingConfigs {
+        releaseConfig {
+            storeFile file('quyunshuo.jks')
+            storePassword "quyunshuo"
+            keyAlias "quyunshuo"
+            keyPassword "quyunshuo"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.releaseConfig
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    // 开启 compose
+    buildFeatures {
+        compose true
+    }
+    // 设置 Kotlin 编译器扩展版本，该版本需要与使用的 Kotlin 版本相兼容，详情见：https://developer.android.com/jetpack/androidx/releases/compose-kotlin?hl=zh-cn
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.4.3'
+    }
+    packaging {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.test.ext.junit
+    androidTestImplementation libs.espresso.core
+    androidTestImplementation platform(libs.compose.bom)
+
+    implementation libs.core.ktx
+    implementation libs.lifecycle.runtime.ktx
+
+    implementation platform(libs.compose.bom)
+    implementation libs.material3
+    implementation libs.ui.tooling.preview
+    debugImplementation libs.ui.tooling.debug
+    implementation libs.activity.compose
+    implementation libs.viewmodel.compose
+    implementation libs.livedata.compose
+}
