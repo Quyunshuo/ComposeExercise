@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ComposeExercise</string>
+    <string name="button_up">▲</string>
+    <string name="button_left">◀</string>
+    <string name="button_right">▶</string>
+    <string name="button_down">▼</string>
 </resources>

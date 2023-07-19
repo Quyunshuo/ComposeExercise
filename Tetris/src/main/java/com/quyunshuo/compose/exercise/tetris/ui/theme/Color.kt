@@ -10,6 +10,15 @@ val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
+val Purple200 = Color(0xFFBB86FC)
+val Purple500 = Color(0xFF6200EE)
+val Purple700 = Color(0xFF3700B3)
+val Teal200 = Color(0xFF03DAC5)
 
-val BrickMatrixColor = Color(0xFF777777)
-val BrickColor = Color(0xFF444444)
+
+val BrickSpirit = Color(0xDD000000)
+val BrickMatrix = Color(0x1F000000)
+val BrickHighlight = Color(0xFF560000)
+val ScreenBackground = Color(0xff9ead86)
+
+val BodyColor = Color(0xffefcc19)

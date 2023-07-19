@@ -5,7 +5,7 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
-import com.quyunshuo.compose.exercise.tetris.ui.theme.BrickMatrixColor
+import com.quyunshuo.compose.exercise.tetris.ui.theme.BrickMatrix
 
 /**
  * 绘制砖块小单元
@@ -52,7 +52,7 @@ fun DrawScope.drawBrick(brickSize: Float, offset: Offset, color: Color) {
 fun DrawScope.drawMatrix(brickSize: Float, matrix: Pair<Int, Int>) {
     (0 until matrix.first).forEach { x ->
         (0 until matrix.second).forEach { y ->
-            drawBrick(brickSize, Offset(x.toFloat(), y.toFloat()), BrickMatrixColor)
+            drawBrick(brickSize, Offset(x.toFloat(), y.toFloat()), BrickMatrix)
         }
     }
 }

@@ -3,7 +3,7 @@ package com.quyunshuo.compose.exercise.tetris.ui
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.clipRect
-import com.quyunshuo.compose.exercise.tetris.ui.theme.BrickColor
+import com.quyunshuo.compose.exercise.tetris.ui.theme.BrickSpirit
 
 /**
  * Shape 砖块
@@ -51,7 +51,7 @@ fun DrawScope.drawSprite(sprite: Sprite, brickSize: Float, matrix: Pair<Int, Int
         bottom = matrix.second * brickSize
     ) {
         sprite.location.forEach {
-            drawBrick(brickSize, Offset(it.x, it.y), BrickColor)
+            drawBrick(brickSize, Offset(it.x, it.y), BrickSpirit)
         }
     }
 }
