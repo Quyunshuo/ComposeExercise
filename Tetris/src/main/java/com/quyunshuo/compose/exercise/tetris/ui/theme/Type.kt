@@ -1,4 +1,4 @@
-package com.quyunshuo.compose.exercise.ui.theme
+package com.quyunshuo.compose.exercise.tetris.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

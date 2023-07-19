@@ -4,12 +4,13 @@ plugins {
 }
 
 android {
-    namespace 'com.quyunshuo.compose.exercise'
+    namespace 'com.quyunshuo.compose.exercise.tetris'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.quyunshuo.compose.exercise"
+        applicationId "com.quyunshuo.compose.exercise.tetris"
         minSdk 24
+        //noinspection OldTargetApi
         targetSdk 33
         versionCode 1
         versionName "1.0"

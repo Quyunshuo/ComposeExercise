@@ -1,4 +1,4 @@
-package com.quyunshuo.compose.exercise.ui.theme
+package com.quyunshuo.compose.exercise.tetris.ui.theme
 
 import android.app.Activity
 import android.os.Build
