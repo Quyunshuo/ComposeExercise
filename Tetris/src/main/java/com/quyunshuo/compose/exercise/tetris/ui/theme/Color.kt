@@ -12,3 +12,4 @@ val Pink40 = Color(0xFF7D5260)
 
 
 val BrickMatrixColor = Color(0xFF777777)
+val BrickColor = Color(0xFF444444)
