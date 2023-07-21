@@ -106,3 +106,22 @@ fun Image(
 - **Inside**：类似于 `ScaleType.centerInside`
 - **None**：不处理
 - **FillBounds**：类似于 `ScaleType.fitXY`，拉伸充满宽高
+
+
+#### 3.布局
+
+##### 3.1 Column 垂直方向线性布局
+
+该布局会将布局中的元素垂直进行排列。
+
+##### 3.2 Row 水平方向线性布局
+
+该布局会将布局中的元素水平进行排列。
+
+#### 3.3 Box 绝对布局
+
+该布局允许在自由位置放置子元素，可以使用 `Modifier.offset()` 来指定子元素的位置。`Box` 适用于需要自由定位子元素的场景，比如创建自定义布局或实现复杂的 UI 效果。
+
+#### 3.4 ConstraintLayout 约束布局
+
+该布局通过约束关系来定位子元素。可以使用 `Modifier.constrainAs()` 和 `Modifier.constrainTo()` 来定义子元素之间的约束关系。`ConstraintLayout` 适用于复杂的布局，可以实现灵活的UI设计。
