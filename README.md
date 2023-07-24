@@ -41,6 +41,11 @@ Compose exercise
 - **Modifier.fillMaxWidth**：宽度填满整个父组件
 - **Modifier.border**：添加边框
 - **Modifier.padding**：添加边距
+- **Modifier.clip**：将内容裁切至 `Shape`
+- **Modifier.clickable**：点击事件
+- **Modifier.combinedClickable**：点击、双击、长按事件，该修饰符目前还是实验性API需要酌情使用
+- **Modifier.indication**：在发生互动时为此组件绘制视觉效果
+- **Modifier.shadow**：绘制阴影
 
 需要注意的是，**Modifier** 是用作用域的概念的，有些特定的修饰符只能在特定的组件内使用。
 
