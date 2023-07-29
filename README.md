@@ -130,3 +130,30 @@ fun Image(
 #### 3.4 ConstraintLayout 约束布局
 
 该布局通过约束关系来定位子元素。可以使用 `Modifier.constrainAs()` 和 `Modifier.constrainTo()` 来定义子元素之间的约束关系。`ConstraintLayout` 适用于复杂的布局，可以实现灵活的UI设计。
+
+### 二、状态
+
+**关键术语**
+
+**组合**：对 **Jetpack Compose** 在执行可组合项时所构建界面的描述。
+
+**初始组合**：通过首次运行可组合项创建组合。
+
+**重组**：在数据发生变化时重新运行可组合项以更新组合。
+
+应用中的状态是指可以随时间变化的任何值。这是一个非常宽泛的定义，从 **Room** 数据库到类的变量，全部涵盖在内。**Compose** 是声明式的，想要刷新某个组合，就重新调用一次组合函数传入新的值，**Compose** 会根据新的值进行重组，重组也就是我们理解的刷新 UI。**Compose** 的重组是智能的，它会根据传入值是否变化而决定是否进行某项的重组，也就是说，只有依赖的参数发生变化才会进行重组。
+
+有的时候我们需要在组合内部声明一些状态，但是由于 **Compose** 重组的特性，这些状态会在重组时被重置，所以我们的正常写法在 **Compose** 组合中是不能正常工作的。因此 **Compose** 提供了一些 API 用于处理这些状态。
+
+#### 1.remember
+
+可组合函数可以使用 [`remember`](https://developer.android.google.cn/reference/kotlin/androidx/compose/runtime/package-summary?hl=zh-cn#remember(kotlin.Function0)) API 将对象存储在内存中。系统会在初始组合期间将由 `remember` 计算的值存储在组合中，并在重组期间返回存储的值。`remember` 既可用于存储可变对象，又可用于存储不可变对象。
+
+**注意**：`remember` 会将对象存储在组合中，当调用 `remember` 的可组合项从组合中移除后，它会忘记该对象。
+
+🌰：
+```kotlin
+var state = remember { "State" }
+```
+
+上面是一个简单的使用 `remember` 声明状态的代码，在每次重组时都会从内存中获取到上一次存储的值。
