@@ -199,3 +199,31 @@ interface MutableState<T> : State<T> {
 ```kotlin
 var currentTime by remember { mutableStateOf(System.currentTimeMillis()) }
 ```
+
+### 三、生命周期
+
+- **OnActive（添加到视图树）**：`Composable` 首次被执行，在视图树上创建对应的节点
+- **OnUpdate（重组）**：`Composable` 跟随重组不断执行，更新视图树上的对应节点
+- **OnDispose（从视图树移除）**：`Composable` 不再被执行，对应节点从视图树上移除
+
+### 四、副作用
+
+`Composable` 在执行过程中，凡是会影响外界的操作都属于副作用（**Side-Effects**），比如在 `Composable` 中执行请求操作、访问数据库、修改外界变量等。重组会造成 `Composable` 频繁的执行，副作用显然不应该跟随重组反复执行，所以 **Compose** 提供了一些副作用 API，可以让副作用只发生在 `Composable` 生命周期特定的阶段，确保行为的可预期性。
+
+#### 1.DisposableEffect
+
+`DisposableEffect` 可以感知 `Composable` 的 `onActive` 和 `onDispose`，允许通过副作用完成一些预处理和收尾处理。
+
+🌰：
+
+```kotlin
+@Composable
+fun DisposableEffectExample() {
+    DisposableEffect(Unit) {
+        // addObserver()
+        onDispose {
+            // removeObserver
+        }
+    }
+}
+```
