@@ -28,7 +28,8 @@ Compose exercise
 
 #### 1.Modifier
 
-传统开发中，我们使用 **XML** 或者具体 **View** 的方法来对 **View** 进行样式上的修改，**Compose** 中设计了 **Modifier** 来对 **Compose** 组件进行样式上的设定，如边距、字体、大小、背景等。
+传统开发中，我们使用 **XML** 或者具体 **View** 的方法来对 **View** 进行样式上的修改，**Compose** 中设计了
+**Modifier** 来对 **Compose** 组件进行样式上的设定，如边距、字体、大小、背景等。
 
 需要注意的是，**Modifier** 修饰符的使用顺序会对结果产生影响，每一个修饰符的使用都会产生结果，下一个修饰符又在这个结果的基础上进行修改。
 
@@ -56,26 +57,27 @@ Compose exercise
 ```kotlin
 @Composable
 fun Text(
-    text: String,									// 要显示的文本
-    modifier: Modifier = Modifier,					// Modifier
-    color: Color = Color.Unspecified,				// 文本颜色
-    fontSize: TextUnit = TextUnit.Unspecified,		// 绘制文本时要使用的字形大小
-    fontStyle: FontStyle? = null,					// 绘制字母时使用的字体变体（例如斜体）
-    fontWeight: FontWeight? = null,					// 绘制文本时使用的字体厚度（例如， FontWeight.Bold）
-    fontFamily: FontFamily? = null,					// 呈现文本时要使用的字体系列
-    letterSpacing: TextUnit = TextUnit.Unspecified,	// 每个字母之间要添加的空格量
-    textDecoration: TextDecoration? = null,			// 在文本上绘制的装饰（例如，下划线）
-    textAlign: TextAlign? = null,					// 文本在段落行内的对齐方式
-    lineHeight: TextUnit = TextUnit.Unspecified,	// 行高
-    overflow: TextOverflow = TextOverflow.Clip,		// 应如何处理视觉溢出
-    softWrap: Boolean = true,						// 控制文本是否能够换行
-    maxLines: Int = Int.MAX_VALUE,					// 文本最多可以有几行
-    onTextLayout: (TextLayoutResult) -> Unit = {},	// 计算新文本布局时执行的回调
-    style: TextStyle = LocalTextStyle.current 		// 文本的样式配置，如颜色，字体，行高等。
+    text: String,                                    // 要显示的文本
+    modifier: Modifier = Modifier,                    // Modifier
+    color: Color = Color.Unspecified,                // 文本颜色
+    fontSize: TextUnit = TextUnit.Unspecified,        // 绘制文本时要使用的字形大小
+    fontStyle: FontStyle? = null,                    // 绘制字母时使用的字体变体（例如斜体）
+    fontWeight: FontWeight? = null,                    // 绘制文本时使用的字体厚度（例如， FontWeight.Bold）
+    fontFamily: FontFamily? = null,                    // 呈现文本时要使用的字体系列
+    letterSpacing: TextUnit = TextUnit.Unspecified,    // 每个字母之间要添加的空格量
+    textDecoration: TextDecoration? = null,            // 在文本上绘制的装饰（例如，下划线）
+    textAlign: TextAlign? = null,                    // 文本在段落行内的对齐方式
+    lineHeight: TextUnit = TextUnit.Unspecified,    // 行高
+    overflow: TextOverflow = TextOverflow.Clip,        // 应如何处理视觉溢出
+    softWrap: Boolean = true,                        // 控制文本是否能够换行
+    maxLines: Int = Int.MAX_VALUE,                    // 文本最多可以有几行
+    onTextLayout: (TextLayoutResult) -> Unit = {},    // 计算新文本布局时执行的回调
+    style: TextStyle = LocalTextStyle.current        // 文本的样式配置，如颜色，字体，行高等。
 )
 ```
 
-需要注意的是，有些字段在 `TextStyle` 中也有提供，`Text` 参数的优先级要大于 `TextStyle`，也就是说，在参数中设置的属性，如果 `TextStyle` 有同名属性，会以 `Text` 参数为准。
+需要注意的是，有些字段在 `TextStyle` 中也有提供，`Text` 参数的优先级要大于 `TextStyle`
+，也就是说，在参数中设置的属性，如果 `TextStyle` 有同名属性，会以 `Text` 参数为准。
 
 ##### 2.2 SelectionContainer 选中文字
 
@@ -92,13 +94,13 @@ fun Text(
 ```kotlin
 @Composable
 fun Image(
-    xxx: Xxx,										// 支持的不同类型的图片资源
-    contentDescription: String?,					// 描述，用于无障碍服务
-    modifier: Modifier = Modifier, 					// Modifier
-    alignment: Alignment = Alignment.Center, 		// 对齐方式
-    contentScale: ContentScale = ContentScale.Fit, 	// 类似于 ScaleType，用于指定图片的填充样式
-    alpha: Float = DefaultAlpha, 					// 不透明度
-    colorFilter: ColorFilter? = null 				// 颜色过滤器
+    xxx: Xxx,                                        // 支持的不同类型的图片资源
+    contentDescription: String?,                    // 描述，用于无障碍服务
+    modifier: Modifier = Modifier,                    // Modifier
+    alignment: Alignment = Alignment.Center,        // 对齐方式
+    contentScale: ContentScale = ContentScale.Fit,    // 类似于 ScaleType，用于指定图片的填充样式
+    alpha: Float = DefaultAlpha,                    // 不透明度
+    colorFilter: ColorFilter? = null                // 颜色过滤器
 )
 ```
 
@@ -112,7 +114,6 @@ fun Image(
 - **None**：不处理
 - **FillBounds**：类似于 `ScaleType.fitXY`，拉伸充满宽高
 
-
 #### 3.布局
 
 ##### 3.1 Column 垂直方向线性布局
@@ -125,11 +126,13 @@ fun Image(
 
 #### 3.3 Box 绝对布局
 
-该布局允许在自由位置放置子元素，可以使用 `Modifier.offset()` 来指定子元素的位置。`Box` 适用于需要自由定位子元素的场景，比如创建自定义布局或实现复杂的 UI 效果。
+该布局允许在自由位置放置子元素，可以使用 `Modifier.offset()` 来指定子元素的位置。`Box`
+适用于需要自由定位子元素的场景，比如创建自定义布局或实现复杂的 UI 效果。
 
 #### 3.4 ConstraintLayout 约束布局
 
-该布局通过约束关系来定位子元素。可以使用 `Modifier.constrainAs()` 和 `Modifier.constrainTo()` 来定义子元素之间的约束关系。`ConstraintLayout` 适用于复杂的布局，可以实现灵活的UI设计。
+该布局通过约束关系来定位子元素。可以使用 `Modifier.constrainAs()` 和 `Modifier.constrainTo()`
+来定义子元素之间的约束关系。`ConstraintLayout` 适用于复杂的布局，可以实现灵活的UI设计。
 
 ### 二、状态
 
@@ -141,19 +144,58 @@ fun Image(
 
 **重组**：在数据发生变化时重新运行可组合项以更新组合。
 
-应用中的状态是指可以随时间变化的任何值。这是一个非常宽泛的定义，从 **Room** 数据库到类的变量，全部涵盖在内。**Compose** 是声明式的，想要刷新某个组合，就重新调用一次组合函数传入新的值，**Compose** 会根据新的值进行重组，重组也就是我们理解的刷新 UI。**Compose** 的重组是智能的，它会根据传入值是否变化而决定是否进行某项的重组，也就是说，只有依赖的参数发生变化才会进行重组。
+应用中的状态是指可以随时间变化的任何值。这是一个非常宽泛的定义，从 **Room** 数据库到类的变量，全部涵盖在内。
+**Compose** 是声明式的，想要刷新某个组合，就重新调用一次组合函数传入新的值，**Compose**
+会根据新的值进行重组，重组也就是我们理解的刷新 UI。**Compose**
+的重组是智能的，它会根据传入值是否变化而决定是否进行某项的重组，也就是说，只有依赖的参数发生变化才会进行重组。
 
-有的时候我们需要在组合内部声明一些状态，但是由于 **Compose** 重组的特性，这些状态会在重组时被重置，所以我们的正常写法在 **Compose** 组合中是不能正常工作的。因此 **Compose** 提供了一些 API 用于处理这些状态。
+有的时候我们需要在可组合项内部声明一些状态，但是由于 **Compose** 重组的特性，这些状态会在重组时被重置，所以我们的正常写法在
+**Compose** 组合中是不能正常工作的。因此 **Compose** 提供了一些 API 用于处理这些状态。
 
 #### 1.remember
 
-可组合函数可以使用 [`remember`](https://developer.android.google.cn/reference/kotlin/androidx/compose/runtime/package-summary?hl=zh-cn#remember(kotlin.Function0)) API 将对象存储在内存中。系统会在初始组合期间将由 `remember` 计算的值存储在组合中，并在重组期间返回存储的值。`remember` 既可用于存储可变对象，又可用于存储不可变对象。
+可组合函数可以使用[`remember`](https://developer.android.google.cn/reference/kotlin/androidx/compose/runtime/package-summary?hl=zh-cn#remember(kotlin.Function0))
+API 将对象存储在内存中。系统会在初始组合期间将由`remember`
+计算的值存储在组合中，并在重组期间返回存储的值。`remember`
+既可用于存储可变对象，又可用于存储不可变对象。`remember` 的这一特性非常重要，让一个函数式组件像一个面向对象组件一样持有自己的“成员变量”。
 
-**注意**：`remember` 会将对象存储在组合中，当调用 `remember` 的可组合项从组合中移除后，它会忘记该对象。
+**注意**：`remember`会将对象存储在组合中，当调用`remember`的可组合项从组合中移除后，它会忘记该对象。
 
 🌰：
+
 ```kotlin
 var state = remember { "State" }
 ```
 
 上面是一个简单的使用 `remember` 声明状态的代码，在每次重组时都会从内存中获取到上一次存储的值。
+
+`remember` 缓存的结果有时需要根据外部状态的变化而更新，所以 `remember` 可以接收 vararg 参数列表作为
+key，当任何一个 key 发生变化时，将重新计算结果更新缓存。
+
+#### 2.State & MutableState
+
+**Compose** 中使用 `State<T>` 来描述一个状态，范型 `T` 是状态的具体类型。
+
+```kotlin
+interface State<out T> {
+    val value: T
+}
+```
+
+`State<T>` 是一个**可观察对象**，当 `Composable` 对 `State` 的 `Value` 进行读取的同时会与 `State`
+建立订阅关系，当 `Value` 发生变化时，作为监听者的 `Composable` 会触发**重组**。但是 `State`
+是不可变的，我们大多数的场景下，需要对 `State` 的 `Value` 进行修改，可以使用可变状态 `MutableState<T>`。
+
+```kotlin
+interface MutableState<T> : State<T> {
+    override var value: T
+    operator fun component1(): T
+    operator fun component2(): (T) -> Unit
+}
+```
+
+🌰：
+
+```kotlin
+var currentTime by remember { mutableStateOf(System.currentTimeMillis()) }
+```
