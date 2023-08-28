@@ -22,6 +22,10 @@ Compose exercise
 - **BrickMatrix**：绘制方块矩阵背景、下落中的方块
 - **Scoreboard**：显示游戏得分、时钟等信息
 
+## Information
+
+这是一个资讯类型的示例项目
+
 ## Compose 基础知识
 
 ### 一、UI 部分
