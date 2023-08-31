@@ -5,18 +5,15 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.google.accompanist.insets.LocalWindowInsets
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.quyunshuo.compose.information.ui.theme.Blue200
 import com.quyunshuo.compose.information.ui.theme.Blue700
 
@@ -33,20 +30,6 @@ val appBarHeight = 56.dp
  */
 @Composable
 fun TopAppBar(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
-
-    val systemUiController = rememberSystemUiController()
-
-    LaunchedEffect(key1 = Unit) {
-        systemUiController.setStatusBarColor(Color.Transparent)
-    }
-
-    /**
-     * 转换状态栏高度 px 为 dp
-     */
-    val statusBarHeightDp = with(LocalDensity.current) {
-        LocalWindowInsets.current.statusBars.top.toDp()
-    }
-
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -59,7 +42,8 @@ fun TopAppBar(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
                     )
                 )
             )
-            .height(appBarHeight + statusBarHeightDp)
+            .height(appBarHeight + 20.dp)
+            .padding(top = 20.dp)
             .then(modifier),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
