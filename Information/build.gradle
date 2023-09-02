@@ -62,4 +62,5 @@ dependencies {
     implementation libs.activity.compose
     implementation libs.viewmodel.compose
     implementation libs.livedata.compose
+    implementation libs.androidx.material.icons.extended
 }

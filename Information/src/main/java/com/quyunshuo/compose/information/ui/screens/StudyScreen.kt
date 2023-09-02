@@ -1,5 +1,6 @@
 package com.quyunshuo.compose.information.ui.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -14,9 +15,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LeadingIconTab
 import androidx.compose.material3.ScrollableTabRow
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Tab
+import androidx.compose.material3.TabRow
 import androidx.compose.material3.TabRowDefaults
 import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
@@ -36,7 +39,7 @@ import com.quyunshuo.compose.information.ui.components.TopAppBar
 @Composable
 fun StudyScreen(vm: MainVM = viewModel()) {
 
-    Column(modifier = Modifier) {
+    Column(modifier = Modifier.background(Color.White)) {
 
         /**
          * 标题栏
@@ -143,10 +146,42 @@ fun StudyScreen(vm: MainVM = viewModel()) {
                 )
             }
         }
+
+        /**
+         * 内容分类
+         */
+        TabRow(
+            selectedTabIndex = vm.currentTypeIndex,
+            containerColor = Color.Transparent,
+            indicator = {},
+            divider = {}
+        ) {
+            vm.types.forEachIndexed { index, dataType ->
+                LeadingIconTab(
+                    selected = vm.currentTypeIndex == index,
+                    onClick = { vm.updateTypeIndex(index) },
+                    icon = {
+                        Icon(imageVector = dataType.icon, contentDescription = null)
+                    },
+                    text = {
+                        Text(
+                            text = dataType.title,
+                            modifier = Modifier.padding(vertical = 8.dp),
+                            fontSize = 14.sp
+                        )
+                    },
+                    selectedContentColor = Color(0xFF149EE7),
+                    unselectedContentColor = Color(0xFF666666),
+                    modifier = Modifier
+                        .height(50.dp)
+                        .wrapContentWidth()
+                )
+            }
+        }
     }
 }
 
-@Preview
+@Preview(backgroundColor = 0xFFFFFFFF, device = "id:pixel_2_xl")
 @Composable
 fun StudyScreenPreview() {
     StudyScreen()
