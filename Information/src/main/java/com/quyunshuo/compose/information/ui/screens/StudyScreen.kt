@@ -4,15 +4,21 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
+import androidx.compose.material3.ScrollableTabRow
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Tab
+import androidx.compose.material3.TabRowDefaults
+import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -23,10 +29,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.quyunshuo.compose.information.MainVM
 import com.quyunshuo.compose.information.ui.components.TopAppBar
 
 @Composable
-fun StudyScreen() {
+fun StudyScreen(vm: MainVM = viewModel()) {
 
     Column(modifier = Modifier) {
 
@@ -98,6 +106,42 @@ fun StudyScreen() {
                 contentDescription = "notification",
                 tint = Color.White
             )
+        }
+
+        /**
+         * Tab 栏，使用 material3 中的 ScrollableTabRow，这是一个可滑动的 tab 栏
+         */
+        ScrollableTabRow(
+            selectedTabIndex = vm.categoryIndex,
+            containerColor = Color(0x22149EE7),
+            edgePadding = 0.dp,
+            indicator = {
+                TabRowDefaults.Indicator(
+                    modifier = Modifier.tabIndicatorOffset(it[vm.categoryIndex]),
+                    color = Color(0xFF149EE7)
+                )
+            }
+        ) {
+            vm.categories.forEachIndexed { index, category ->
+                Tab(
+                    selected = vm.categoryIndex == index,
+                    // 点击时更新 ViewModel 中关于当前所选下标的 state
+                    // 但我们应该过滤相同的下标点击事件，这部分逻辑写在 ViewModel 中了
+                    onClick = { vm.updateCategoryIndex(index) },
+                    text = {
+                        Text(
+                            text = category.title,
+                            modifier = Modifier.padding(vertical = 8.dp),
+                            fontSize = 14.sp
+                        )
+                    },
+                    selectedContentColor = Color(0xFF149EE7),
+                    unselectedContentColor = Color(0xFF666666),
+                    modifier = Modifier
+                        .height(50.dp)
+                        .wrapContentWidth()
+                )
+            }
         }
     }
 }
