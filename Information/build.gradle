@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.quyunshuo.compose.information'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.quyunshuo.compose.information"
@@ -31,13 +31,13 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = "1.8"
     }
     buildFeatures {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.4.3'
+        kotlinCompilerExtensionVersion '1.5.2'
     }
     packaging {
         resources {
@@ -62,5 +62,5 @@ dependencies {
     implementation libs.activity.compose
     implementation libs.viewmodel.compose
     implementation libs.livedata.compose
-    implementation libs.androidx.material.icons.extended
+    implementation libs.material.icons.extended
 }

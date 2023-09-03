@@ -1,7 +1,7 @@
 [versions]
 # plugins
-agp = "8.0.2"
-kotlin = "1.8.10"
+agp = "8.1.1"
+kotlin = "1.9.0"
 
 # test
 junit = "4.13.2"
@@ -13,15 +13,14 @@ core-ktx = "1.10.1"
 lifecycle-runtime-ktx = "2.6.1"
 
 # compose
-compose-bom = "2023.03.00"
+compose-bom = "2023.08.00"
 activity-compose = "1.7.0"
 viewmodel-compose = "2.6.1"
 
 #accompanist
-accompanist-systemuicontroller = "0.24.3-alpha"
+accompanist = "0.32.0"
 
 [libraries]
-androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version = "1.4.0" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
@@ -37,14 +36,7 @@ material3 = { group = "androidx.compose.material3", name = "material3" }
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewmodel-compose" }
 livedata-compose = { group = "androidx.compose.runtime", name = "runtime-livedata" }
-
-# accompanist
-accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanist-systemuicontroller" }
-accompanist-navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist-systemuicontroller" }
-accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist-systemuicontroller" }
-accompanist-placeholder-material = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "accompanist-systemuicontroller" }
-accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanist-systemuicontroller" }
-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist-systemuicontroller" }
+material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version = "compose-bom" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
