@@ -20,6 +20,8 @@ viewmodel-compose = "2.6.1"
 #accompanist
 accompanist = "0.32.0"
 
+coil = "2.4.0"
+
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
@@ -37,6 +39,10 @@ activity-compose = { group = "androidx.activity", name = "activity-compose", ver
 viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewmodel-compose" }
 livedata-compose = { group = "androidx.compose.runtime", name = "runtime-livedata" }
 material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version = "compose-bom" }
+
+# 三方库
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

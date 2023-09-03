@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.quyunshuo.compose.information.MainVM
+import com.quyunshuo.compose.information.ui.components.Banner
 import com.quyunshuo.compose.information.ui.components.TopAppBar
 
 @Composable
@@ -178,6 +179,11 @@ fun StudyScreen(vm: MainVM = viewModel()) {
                 )
             }
         }
+
+        /**
+         * 轮播图
+         */
+        Banner(vm.bannerState)
     }
 }
 
