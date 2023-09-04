@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
@@ -36,9 +37,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.quyunshuo.compose.information.MainVM
+import com.quyunshuo.compose.information.ui.components.ArticleItem
 import com.quyunshuo.compose.information.ui.components.Banner
 import com.quyunshuo.compose.information.ui.components.NotificationContent
 import com.quyunshuo.compose.information.ui.components.TopAppBar
+import com.quyunshuo.compose.information.ui.components.VideoItem
 
 @Composable
 fun StudyScreen(vm: MainVM = viewModel()) {
@@ -203,7 +206,18 @@ fun StudyScreen(vm: MainVM = viewModel()) {
                      */
                     NotificationContent(vm.notificationList)
                 }
-
+                /**
+                 * 根据是否显示资讯文章来控制显示的列表内容
+                 */
+                if (vm.showArticleList) {
+                    items(vm.articleList) { articleEntity ->
+                        ArticleItem(article = articleEntity)
+                    }
+                } else {
+                    items(vm.videoList) { videoEntity ->
+                        VideoItem(videoEntity)
+                    }
+                }
             }
         }
     }

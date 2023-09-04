@@ -8,8 +8,10 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import com.quyunshuo.compose.information.model.ArticleEntity
 import com.quyunshuo.compose.information.model.Category
 import com.quyunshuo.compose.information.model.DataType
+import com.quyunshuo.compose.information.model.VideoEntity
 
 class MainVM : ViewModel() {
 
@@ -31,7 +33,7 @@ class MainVM : ViewModel() {
     /**
      * 当前分类下标
      */
-    var categoryIndex by mutableStateOf(0)
+    var categoryIndex by mutableIntStateOf(0)
         private set
 
     /**
@@ -108,4 +110,127 @@ class MainVM : ViewModel() {
         "生活中最珍贵的东西常常被我们忽略，直到失去才会后悔莫及。 - 《红楼梦》 曹雪芹",
         "每个人都有自己的故事，我们应该学会尊重和理解他人的选择和经历。 - 《围城》 金庸"
     )
+
+    var articleList by mutableStateOf(
+        listOf(
+            ArticleEntity(
+                title = "1.人社部向疫情防控期参与复工复产的劳动者表",
+                source = "“学习强国”学习平台",
+                timestamp = "2020-02-10"
+            ),
+            ArticleEntity(
+                title = "2.人社部向疫情防控期参与复工复产的劳动者表人社部向疫情防控期参与复工复产的劳动者表",
+                source = "“学习强国”学习平台",
+                timestamp = "2020-02-10"
+            ),
+            ArticleEntity(
+                title = "3.人社部向疫情防控期参与复工复产的劳动者表",
+                source = "“学习强国”学习平台",
+                timestamp = "2020-02-10"
+            ),
+            ArticleEntity(
+                title = "4.人社部向疫情防控期参与复工复产的劳动者表",
+                source = "“学习强国”学习平台",
+                timestamp = "2020-02-10"
+            ),
+            ArticleEntity(
+                title = "5.人社部向疫情防控期参与复工复产的劳动者表",
+                source = "“学习强国”学习平台",
+                timestamp = "2020-02-10"
+            ),
+            ArticleEntity(
+                title = "6.人社部向疫情防控期参与复工复产的劳动者表",
+                source = "“学习强国”学习平台",
+                timestamp = "2020-02-10"
+            ),
+            ArticleEntity(
+                title = "7.人社部向疫情防控期参与复工复产的劳动者表",
+                source = "“学习强国”学习平台",
+                timestamp = "2020-02-10"
+            ),
+            ArticleEntity(
+                title = "8.人社部向疫情防控期参与复工复产的劳动者表",
+                source = "“学习强国”学习平台",
+                timestamp = "2020-02-10"
+            ),
+            ArticleEntity(
+                title = "9.人社部向疫情防控期参与复工复产的劳动者表",
+                source = "“学习强国”学习平台",
+                timestamp = "2020-02-10"
+            ),
+            ArticleEntity(
+                title = "10.人社部向疫情防控期参与复工复产的劳动者表",
+                source = "“学习强国”学习平台",
+                timestamp = "2020-02-10"
+            )
+        )
+    )
+        private set
+
+    var videoList by mutableStateOf(
+        listOf(
+            VideoEntity(
+                title = "1.行测老师告诉你如何制定适合自己的学习方案",
+                type = "视频课程",
+                duration = "00:02:00",
+                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+            ),
+            VideoEntity(
+                title = "2.行测老师告诉你如何制定适合自己的学习方案",
+                type = "视频课程",
+                duration = "00:02:00",
+                imageUrl = "https://docs.bughub.icu/compose/assets/banner2.webp"
+            ),
+            VideoEntity(
+                title = "3.行测老师告诉你如何制定适合自己的学习方案",
+                type = "视频课程",
+                duration = "00:02:00",
+                imageUrl = "https://docs.bughub.icu/compose/assets/banner3.webp"
+            ),
+            VideoEntity(
+                title = "4.行测老师告诉你如何制定适合自己的学习方案",
+                type = "视频课程",
+                duration = "00:02:00",
+                imageUrl = "https://docs.bughub.icu/compose/assets/banner4.jpg"
+            ),
+            VideoEntity(
+                title = "5.行测老师告诉你如何制定适合自己的学习方案",
+                type = "视频课程",
+                duration = "00:02:00",
+                imageUrl = "https://docs.bughub.icu/compose/assets/banner5.jpg"
+            ),
+            VideoEntity(
+                title = "6.行测老师告诉你如何制定适合自己的学习方案",
+                type = "视频课程",
+                duration = "00:02:00",
+                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+            ),
+            VideoEntity(
+                title = "7.行测老师告诉你如何制定适合自己的学习方案",
+                type = "视频课程",
+                duration = "00:02:00",
+                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+            ),
+            VideoEntity(
+                title = "8.行测老师告诉你如何制定适合自己的学习方案",
+                type = "视频课程",
+                duration = "00:02:00",
+                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+            ),
+            VideoEntity(
+                title = "9.行测老师告诉你如何制定适合自己的学习方案",
+                type = "视频课程",
+                duration = "00:02:00",
+                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+            ),
+            VideoEntity(
+                title = "10.行测老师告诉你如何制定适合自己的学习方案",
+                type = "视频课程",
+                duration = "00:02:00",
+                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+            )
+        )
+    )
+        private set
+
 }
