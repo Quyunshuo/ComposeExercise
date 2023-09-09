@@ -63,6 +63,7 @@ dependencies {
     implementation libs.viewmodel.compose
     implementation libs.livedata.compose
     implementation libs.material.icons.extended
+    implementation libs.constraintlayout.compose
 
     implementation libs.coil
     implementation libs.coil.compose

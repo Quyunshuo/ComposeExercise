@@ -79,7 +79,8 @@ fun NotificationContent(notificationList: List<String>) {
 
     Row(
         modifier = Modifier
-            .padding(8.dp)
+            .padding(horizontal = 8.dp)
+            .padding(top = 8.dp)
             .clip(RoundedCornerShape(8.dp))
             .background(Color(0x22149EE7))
             .height(45.dp)

@@ -173,61 +173,61 @@ class MainVM : ViewModel() {
                 title = "1.行测老师告诉你如何制定适合自己的学习方案",
                 type = "视频课程",
                 duration = "00:02:00",
-                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+                imageUrl = "https://images.unsplash.com/photo-1580860749755-f49eb5509d55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3774&q=80"
             ),
             VideoEntity(
                 title = "2.行测老师告诉你如何制定适合自己的学习方案",
                 type = "视频课程",
                 duration = "00:02:00",
-                imageUrl = "https://docs.bughub.icu/compose/assets/banner2.webp"
+                imageUrl = "https://images.unsplash.com/photo-1580860749755-f49eb5509d55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3774&q=80"
             ),
             VideoEntity(
                 title = "3.行测老师告诉你如何制定适合自己的学习方案",
                 type = "视频课程",
                 duration = "00:02:00",
-                imageUrl = "https://docs.bughub.icu/compose/assets/banner3.webp"
+                imageUrl = "https://images.unsplash.com/photo-1580860749755-f49eb5509d55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3774&q=80"
             ),
             VideoEntity(
                 title = "4.行测老师告诉你如何制定适合自己的学习方案",
                 type = "视频课程",
                 duration = "00:02:00",
-                imageUrl = "https://docs.bughub.icu/compose/assets/banner4.jpg"
+                imageUrl = "https://images.unsplash.com/photo-1580860749755-f49eb5509d55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3774&q=80"
             ),
             VideoEntity(
                 title = "5.行测老师告诉你如何制定适合自己的学习方案",
                 type = "视频课程",
                 duration = "00:02:00",
-                imageUrl = "https://docs.bughub.icu/compose/assets/banner5.jpg"
+                imageUrl = "https://images.unsplash.com/photo-1580860749755-f49eb5509d55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3774&q=80"
             ),
             VideoEntity(
                 title = "6.行测老师告诉你如何制定适合自己的学习方案",
                 type = "视频课程",
                 duration = "00:02:00",
-                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+                imageUrl = "https://images.unsplash.com/photo-1580860749755-f49eb5509d55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3774&q=80"
             ),
             VideoEntity(
                 title = "7.行测老师告诉你如何制定适合自己的学习方案",
                 type = "视频课程",
                 duration = "00:02:00",
-                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+                imageUrl = "https://images.unsplash.com/photo-1580860749755-f49eb5509d55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3774&q=80"
             ),
             VideoEntity(
                 title = "8.行测老师告诉你如何制定适合自己的学习方案",
                 type = "视频课程",
                 duration = "00:02:00",
-                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+                imageUrl = "https://images.unsplash.com/photo-1580860749755-f49eb5509d55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3774&q=80"
             ),
             VideoEntity(
                 title = "9.行测老师告诉你如何制定适合自己的学习方案",
                 type = "视频课程",
                 duration = "00:02:00",
-                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+                imageUrl = "https://images.unsplash.com/photo-1580860749755-f49eb5509d55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3774&q=80"
             ),
             VideoEntity(
                 title = "10.行测老师告诉你如何制定适合自己的学习方案",
                 type = "视频课程",
                 duration = "00:02:00",
-                imageUrl = "https://docs.bughub.icu/compose/assets/banner1.webp"
+                imageUrl = "https://images.unsplash.com/photo-1580860749755-f49eb5509d55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3774&q=80"
             )
         )
     )
