@@ -57,5 +57,5 @@ fun ArcProgressBar(
 @Preview
 @Composable
 fun ArcProgressBarPreview() {
-    ArcProgressBar(200.dp, 85)
+    ArcProgressBar(100.dp, 85)
 }
