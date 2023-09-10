@@ -13,36 +13,41 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ArcProgressBar(size: Dp, progress: Int, maxProcess: Int = 100) {
+fun ArcProgressBar(
+    size: Dp,
+    progress: Int,
+    maxProcess: Int = 100,
+    startAngle: Float = 150f,
+    sweepAngle: Float = 240f,
+    backgroundArcColor: Color = Color(0x26FFFFFF),
+    progressArcColor: Color = Color.White,
+    arcWidth: Dp = 8.dp
+) {
     Canvas(
         modifier = Modifier
             .size(size)
-            .padding(4.dp)
+            .padding(arcWidth / 2)
     ) {
-        /**
-         * 背景圆弧
-         */
+        // background arc
         drawArc(
-            color = Color(0x26FFFFFF),
-            startAngle = 150f,
-            sweepAngle = 240f,
+            color = backgroundArcColor,
+            startAngle = startAngle,
+            sweepAngle = sweepAngle,
             useCenter = false,
             style = Stroke(
-                width = 8.dp.toPx(),
+                width = arcWidth.toPx(),
                 cap = StrokeCap.Round
             )
         )
 
-        /**
-         * 进度圆弧
-         */
+        // progress arc
         drawArc(
-            color = Color.White,
-            startAngle = 150f,
-            sweepAngle = 240f * (progress.toFloat() / maxProcess.toFloat()),
+            color = progressArcColor,
+            startAngle = startAngle,
+            sweepAngle = sweepAngle * (progress.toFloat() / maxProcess.toFloat()),
             useCenter = false,
             style = Stroke(
-                width = 8.dp.toPx(),
+                width = arcWidth.toPx(),
                 cap = StrokeCap.Round
             )
         )
