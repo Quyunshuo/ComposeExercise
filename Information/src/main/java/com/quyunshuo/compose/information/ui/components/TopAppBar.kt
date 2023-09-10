@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -42,8 +43,8 @@ fun TopAppBar(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
                     )
                 )
             )
-            .height(appBarHeight + 20.dp)
-            .padding(top = 20.dp)
+            .statusBarsPadding()
+            .height(appBarHeight)
             .then(modifier),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
