@@ -26,6 +26,10 @@ Compose exercise
 
 这是一个资讯类型的示例项目
 
+## Animation
+
+动画相关演示
+
 ## Compose 基础知识
 
 ### 一、UI 部分

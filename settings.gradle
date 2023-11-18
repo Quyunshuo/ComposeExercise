@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "ComposeExercise"
 include ':Tetris'
 include ':Information'
+include ':Animation'
